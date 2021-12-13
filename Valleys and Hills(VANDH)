@@ -1,0 +1,12 @@
+for i in range(int(input())):
+    h,v=map(int,input().split())
+    if h>v:
+        ans='01'*v
+        ans+='010'*(h-v)
+    elif v>h:
+        ans='10'*(h)
+        ans+='101'*(v-h)
+    else:
+        ans='10'*(v+1)
+    print(len(ans))
+    print(ans)
