@@ -1,0 +1,7 @@
+for i in range(int(input())):
+    l=list(input().split())
+    a,b=input().split()
+    if l.index(a)<l.index(b):
+        print(a)
+    else:
+        print(b)
