@@ -1,0 +1,25 @@
+for i in range(int(input())):
+    n=int(input())
+    l=list(map(int,input().split()))
+   # print(l)
+    ans=0
+    count={}
+    for i in range(len(l)):
+        if l[i] in count:
+            count[l[i]]+=1
+        else:
+            count[l[i]]=1
+    #print(count)
+    #print(count.values())
+    m=max(count.values())
+      # print("3w",m)
+    if m==n:
+        ans=0
+    elif m<=1:
+        ans=-1
+    else:
+            #number of non repeating terms(whose count is not highest) +1
+        ans=n-m+1
+            
+
+    print(ans)
